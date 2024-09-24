@@ -16,6 +16,11 @@
 
 .heading {
   font-weight: 500;
+  display: flex;
+  align-items: baseline;
+  white-space: nowrap;
+  margin-bottom: -10px;
+  /* border: 1px solid red; */
 }
 
 .capital {
@@ -31,3 +36,9 @@
 /* .subheading span {
   border: 1px solid lime;
 } */
+
+.underline {
+  border: 1px solid var(--foreground);
+  border-radius: 2px;
+  margin-bottom: 4px;
+}
