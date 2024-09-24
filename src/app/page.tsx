@@ -1,4 +1,4 @@
-import { Logo, NavigationButton, NavigationGroup, Slideshow } from "@/components";
+import { Logo, NavigationButton, NavigationGroup, Slideshow, Header } from "@/components";
 
 const routes: NavigationButton[] = [
   {
@@ -18,7 +18,7 @@ const routes: NavigationButton[] = [
 export default function Home() {
   return (
     <>
-      <header>
+      <Header>
         <Logo />
         <NavigationGroup>
           {routes.map((button, i) => {
@@ -27,7 +27,7 @@ export default function Home() {
             )
           })}
         </NavigationGroup>
-      </header>
+      </Header>
       <section>
           <Slideshow />
       </section>

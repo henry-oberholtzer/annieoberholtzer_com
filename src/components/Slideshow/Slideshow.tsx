@@ -14,12 +14,6 @@ const Slideshow = () => {
             alt="Placeholder image"
           />
       </SwiperSlide>
-      <SwiperSlide>
-        <Image
-            src={placeholder}
-            alt="Placeholder image"
-          />
-      </SwiperSlide>
     </Swiper>
   )
 }

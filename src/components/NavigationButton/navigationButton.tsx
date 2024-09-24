@@ -4,8 +4,10 @@ const NavigationButton = (obj: { props: NavigationButton }) => {
   const prop = obj.props
 
   return (
-    <a className={styles.box} href={prop.to}>
-      {prop.name}
+    <a href={prop.to}>
+    <div className={styles.box}>
+        {prop.name}
+    </div>
     </a>
   )
 }
