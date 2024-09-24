@@ -1,10 +1,31 @@
 .box {
-  display: flex;
-  flex-direction: column;
+  display: inline-grid;
+  grid-template-columns: 1fr;
+  margin: 8px 16px;
   text-align: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  text-transform: uppercase;
 }
 
 .box:hover {
   cursor: pointer;
+  opacity: 0.9;
 }
+
+.heading {
+  font-weight: 500;
+}
+
+.capital {
+  font-size: 120%;
+}
+
+.subheading {
+  /* border: 1px solid white; */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* .subheading span {
+  border: 1px solid lime;
+} */

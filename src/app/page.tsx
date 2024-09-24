@@ -1,6 +1,4 @@
-import Image from "next/image"
-import placeholder from './media/images/placeholder.jpg'
-import { Logo, NavigationButton, NavigationGroup } from "@/components";
+import { Logo, NavigationButton, NavigationGroup, Slideshow } from "@/components";
 
 const routes: NavigationButton[] = [
   {
@@ -31,10 +29,7 @@ export default function Home() {
         </NavigationGroup>
       </header>
       <section>
-        <Image
-          src={placeholder}
-          alt="Placeholder image"
-        />
+          <Slideshow />
       </section>
       <section>
         <p>

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Geologica } from 'next/font/google'
+import { Vollkorn } from 'next/font/google'
 import "./globals.css";
 
-const geologica = Geologica({
-  weight: ["300", "400", "500"],
+const vollkorn = Vollkorn({
+  variable: "--vollkorn",
   subsets: ["latin"]
 })
 
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geologica.className}`}>
+      <body className={`${vollkorn.className}`}>
         {children}
       </body>
     </html>
