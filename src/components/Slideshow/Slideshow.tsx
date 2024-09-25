@@ -3,6 +3,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
 import placeholder from '../../app/media/images/placeholder.jpg'
+import 'swiper/css';
 
 const Slideshow = () => {
 
@@ -11,6 +12,14 @@ const Slideshow = () => {
       <SwiperSlide>
         <Image
             src={placeholder}
+            objectFit="contain"
+            alt="Placeholder image"
+          />
+      </SwiperSlide>
+      <SwiperSlide>
+        <Image
+            src={placeholder}
+            objectFit="contain"
             alt="Placeholder image"
           />
       </SwiperSlide>
