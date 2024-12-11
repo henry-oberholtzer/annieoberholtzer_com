@@ -1,13 +1,26 @@
 .header {
   display: flex;
+  position: fixed;
+  z-index: 999;
+  width: 100vw; 
   align-items: center;
   justify-content: space-between;
+  padding: 8px 16px;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 780px) {
   .header {
     display: grid;
     -ms-grid-column-align: center;
     justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .header {
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }

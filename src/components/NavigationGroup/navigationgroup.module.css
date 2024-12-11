@@ -1,5 +1,22 @@
 .box {
   /* border: 1px solid blue; */
   display: flex;
-  justify-content: space-evenly;
+  width: 350px;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 350px) {
+  .box {
+    width: 320px;
+    font-size: 90%;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .box {
+    height: 74px;
+    display: flex;
+    align-items: top;
+    margin-bottom: 8px;
+  }
 }
