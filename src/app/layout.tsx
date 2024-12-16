@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { Vollkorn } from 'next/font/google'
+import localFont from 'next/font/local'
 import "./globals.css";
 
-const vollkorn = Vollkorn({
+const vollkorn = localFont({
   variable: "--vollkorn",
-  subsets: ["latin"]
+  src: [
+    {
+      path: './fonts/Vollkorn/Vollkorn-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    }
+  ]
 })
 
 export const metadata: Metadata = {

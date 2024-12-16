@@ -1,9 +1,9 @@
-import { PropsWithChildren } from 'react'
 import styles from './container.module.css'
+import { ContainerProps } from './types'
 
-const Container = (props: PropsWithChildren) => {
+const Container = (props: ContainerProps) => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{ padding: props.padding}}>
       {props.children}
     </div>
   )
