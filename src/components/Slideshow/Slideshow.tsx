@@ -10,11 +10,11 @@ import { SlideshowSlide, Slides } from "./types";
 const SwiperSlides = (slides: Slides) => {
   return slides.map((slide: SlideshowSlide, i) => {
     return (
-      <SwiperSlide key={`${i}-${slide.altText.slice(0,5)}`} className={styles.swiperSlide} >
+      <SwiperSlide key={`${i}-${slide.altText.slice(0,5)}`} >
         <Image
             priority
             key={`${i}-${slide.altText.slice(0,5)}`}
-            fill
+            className={styles.image}
             src={slide.imageURL}
             alt={slide.altText}
           />
@@ -35,7 +35,7 @@ const Slideshow = (obj: { props: Slides}) => {
       pagination={{
         clickable: true,
       }}
-      className={styles.slideshow} >
+    >
       {slides}
     </Swiper>
   );
