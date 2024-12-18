@@ -1,8 +1,23 @@
-export default function About() {
+import type { NextPageWithLayout } from "./_app"
+import Layout from "@/components/Layout/Layout"
+import type { ReactElement } from "react"
+
+const About: NextPageWithLayout = () => {
   return (
     <p>Placeholder for About Page</p>
   )
 }
+
+About.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  )
+}
+
+export default About
+
 
               {/* <p>I graduated Summa Cum Laude from Missouri State University with a BFA in Acting, an On-Camera Certificate, and a Criminology minor.
     Although I now live in New York I am still a proud Californian, born and raised in Davis, CA.

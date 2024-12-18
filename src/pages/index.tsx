@@ -1,7 +1,12 @@
 import { Slideshow, Container } from "@/components";
-import placeholder from './media/images/placeholder.jpg'
+import placeholder from '../app/media/images/placeholder.jpg'
+import annie_cafe from '../app/media/images/annie_cafe.jpg';
+import annie_railroad from '../app/media/images/annie_railroad.jpg'
 import { SlideshowSlide } from "@/components/Slideshow/types";
-
+import type { NextPageWithLayout } from "./_app";
+import Layout from "@/components/Layout/Layout";
+import type { ReactElement } from "react";
+import { Metadata } from "next";
 
 const slideshowContents: SlideshowSlide[] = [
   {
@@ -9,21 +14,34 @@ const slideshowContents: SlideshowSlide[] = [
     altText: "This is placeholder text",
   },
   {
-    imageURL: placeholder,
+    imageURL: annie_cafe,
     altText: "This is placeholder text",
   }
 ]
 
-export default function Home() {
+export const metadata: Metadata = {
+  title: "Annie Oberholtzer",
+  description: "Actress & fight coordinator",
+};
+
+const Page: NextPageWithLayout = () => {
   return (
-    <>
       <Container padding="0px 16px">
             <Slideshow props={slideshowContents}/>
-            <div style={{ height: "800px"}}>
+            <div style={{ height: "800px" }}>
               <h2>Hi! I&apos;m Annie Oberholtzer.</h2>
-              <h3>NYC based actor & fight coordinator.</h3>
+              <h3 style={{ fontWeight: "normal" }}>NYC based actor & fight coordinator.</h3>
             </div>
       </Container>
-    </>
   );
 }
+
+Page.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <Layout>
+      {page}
+    </Layout>
+  )
+}
+
+export default Page

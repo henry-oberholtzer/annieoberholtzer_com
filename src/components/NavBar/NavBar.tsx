@@ -1,6 +1,22 @@
 import { Header, Logo, NavigationButton, NavigationGroup } from ".."
 
-export default function NavBar({ routes }: NavBarProps) {
+
+const routes: NavigationButton[] = [
+  {
+    name: "About",
+    to: "about",
+  },
+  {
+    name: "Media",
+    to: "media",
+  },
+  {
+    name: "Contact",
+    to: "contact",
+  }
+]
+
+export default function NavBar() {
   return (
     <Header>
       <Logo />
