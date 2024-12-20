@@ -1,0 +1,16 @@
+.index_container {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.slideshow {
+  grid-column: 1;
+}
+
+.about {
+  grid-column: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

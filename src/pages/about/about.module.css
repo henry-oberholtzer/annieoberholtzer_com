@@ -1,0 +1,30 @@
+.resume caption {
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.resume tr {
+  width: 100%;
+}
+
+.performances th:first-of-type {
+  font-style: italic;
+  text-transform: none;
+}
+
+.resume thead {
+  display: none;
+}
+
+.resume th {
+  text-transform: uppercase;
+  font-weight: normal;
+  text-align: left;
+  vertical-align: top;
+}
+
+.resume ul {
+  list-style: none;
+}

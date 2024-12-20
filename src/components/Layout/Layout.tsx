@@ -1,14 +1,14 @@
 import NavBar from "../NavBar/NavBar";
 import Footer from "../Footer/footer";
-import { LayoutProps } from "./types";
-import { vollkorn } from "@/app/fonts";
+import styles from './layout.module.css'
+import { PropsWithChildren } from "react";
 
-export default function Layout({ children}: LayoutProps) {
+export default function Layout({ children}: PropsWithChildren) {
   return (
-    <>
+    <div className={styles.parent}>
       <NavBar />
       {children}
       <Footer />
-    </>
+    </div>
   )
 }

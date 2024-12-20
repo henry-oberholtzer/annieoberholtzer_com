@@ -1,4 +1,4 @@
-import { Slideshow, Container } from "@/components";
+import { Slideshow } from "@/components";
 import placeholder from '../app/media/images/placeholder.jpg'
 import annie_cafe from '../app/media/images/annie_cafe.jpg';
 import annie_railroad from '../app/media/images/annie_railroad.jpg'
@@ -7,6 +7,7 @@ import type { NextPageWithLayout } from "./_app";
 import Layout from "@/components/Layout/Layout";
 import type { ReactElement } from "react";
 import { Metadata } from "next";
+import styles from './index.module.css';
 
 const slideshowContents: SlideshowSlide[] = [
   {
@@ -15,6 +16,10 @@ const slideshowContents: SlideshowSlide[] = [
   },
   {
     imageURL: annie_cafe,
+    altText: "This is placeholder text",
+  },
+  {
+    imageURL: annie_railroad,
     altText: "This is placeholder text",
   }
 ]
@@ -26,13 +31,17 @@ export const metadata: Metadata = {
 
 const Page: NextPageWithLayout = () => {
   return (
-      <Container padding="0px 16px">
-            <Slideshow props={slideshowContents}/>
-            <div style={{ height: "800px" }}>
-              <h2>Hi! I&apos;m Annie Oberholtzer.</h2>
-              <h3 style={{ fontWeight: "normal" }}>NYC based actor & fight coordinator.</h3>
-            </div>
-      </Container>
+    <div className={styles.index_container} >
+      <div className={styles.slideshow} >
+        <Slideshow props={slideshowContents} />
+      </div>
+      <div className={styles.about}>
+        <section>
+          <h2>Hi! I&apos;m Annie Oberholtzer.</h2>
+          <h3 style={{ fontWeight: "normal" }}>NYC based actor & fight coordinator.</h3>
+        </section>
+      </div>
+    </div>
   );
 }
 

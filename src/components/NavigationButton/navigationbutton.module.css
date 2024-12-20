@@ -1,5 +1,5 @@
 .box {
-  width: 90px;
+  min-width: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,6 +8,7 @@
 .boxInner {
   border-bottom: 2px solid var(--foreground);
   text-align: center;
+  text-wrap: nowrap;
   width: fit-content;
 }
 
