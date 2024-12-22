@@ -28,3 +28,31 @@
 .resume ul {
   list-style: none;
 }
+
+.headshotResume {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+}
+
+.headshot {
+  grid-column: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.resume {
+  grid-column: 2;
+}
+
+.swiper {
+  width: min-content;
+  display: block;
+}
+
+.downloads {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+

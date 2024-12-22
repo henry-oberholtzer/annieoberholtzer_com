@@ -1,7 +1,6 @@
 .box {
   /* border: 1px solid blue; */
   display: flex;
-  width: 350px;
   justify-content: space-between;
 }
 

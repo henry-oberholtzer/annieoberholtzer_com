@@ -8,6 +8,7 @@ import Layout from "@/components/Layout/Layout";
 import type { ReactElement } from "react";
 import { Metadata } from "next";
 import styles from './index.module.css';
+import Link from "next/link";
 
 const slideshowContents: SlideshowSlide[] = [
   {
@@ -39,6 +40,9 @@ const Page: NextPageWithLayout = () => {
         <section>
           <h2>Hi! I&apos;m Annie Oberholtzer.</h2>
           <h3 style={{ fontWeight: "normal" }}>NYC based actor & fight coordinator.</h3>
+          <p>Check out my <Link href="resume">resume</Link> and recent <Link href="media">acting reels</Link>.</p>
+          <br/>
+          <p>Interested in working together? Get in <Link href="contact">contact!</Link></p>
         </section>
       </div>
     </div>

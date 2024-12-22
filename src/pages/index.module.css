@@ -14,3 +14,13 @@
   align-items: center;
   justify-content: center;
 }
+
+.about a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.about a:hover, .about a:active {
+  color: var(--highlight);
+  transition: color 200ms ease; 
+}

@@ -7,6 +7,10 @@ const routes: NavigationButton[] = [
     to: "about",
   },
   {
+    name: "Headshot / Resume",
+    to: "resume",
+  },
+  {
     name: "Media",
     to: "media",
   },
