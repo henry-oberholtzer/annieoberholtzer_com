@@ -4,6 +4,7 @@
   --highlight: #df203d;
   --background_light: #343434;
   --platinum: #E8E8E8;
+  --swiper-theme-color: var(--highlight);
 }
 
 @media (prefers-color-scheme: dark) {

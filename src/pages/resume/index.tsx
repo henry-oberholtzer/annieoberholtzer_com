@@ -16,16 +16,16 @@ import { SlideshowSlide } from "@/components/Slideshow/types";
 
 const images: SlideshowSlide[] = [
   {
+    imageURL: headshot_2,
+    altText: "Annie Oberholtzer Headshot"
+  },
+  {
     imageURL: headshot_3,
     altText: "Annie Oberholtzer Headshot"
   },
   {
     imageURL: headshot_1,
     altText: "Annie Oberholtzer Headshot",
-  },
-  {
-    imageURL: headshot_2,
-    altText: "Annie Oberholtzer Headshot"
   },
   {
     imageURL: headshot_4,
@@ -36,7 +36,8 @@ const images: SlideshowSlide[] = [
 const generateSlides = (slides: SlideshowSlide[]) => {
   return slides.map((i, index) => {
     return (
-      <SwiperSlide key={`${i.altText}${index}`}>
+      <SwiperSlide 
+        key={`${i.altText}${index}`}>
         <Image 
           key={`${i.altText}${index}`}
           src={i.imageURL} 
@@ -57,10 +58,15 @@ const About: NextPageWithLayout = () => {
             className={styles.swiper}
             centeredSlides={true}
             slidesPerView={1}
+            spaceBetween={0}
             loop={true}
             modules={[Pagination]}
+            autoplay={{
+              delay: 6000,
+              pauseOnMouseEnter: true,
+              disableOnInteraction: false,
+            }}
             pagination={{
-              dynamicBullets: true,
               clickable: true
             }}
             >
@@ -68,24 +74,31 @@ const About: NextPageWithLayout = () => {
           </Swiper>
         </div>
         <div className={styles.resume}>
-          <section className={styles.downloads}>
+          <nav className={styles.downloads}>
+            <li>
                   <NavigationButton props={{
                     name: "Download Resume",
                     to: "/download"
                   }} />
+            </li>
+            <li>
                   <NavigationButton props={{
                     name: "Download Headshots",
                     to: "/download"
                   }} />
+            </li>
+            <li>
                   <NavigationButton props={{
                     name: "Download All",
                     to: "/download"
                   }} />
+            </li>
+          </nav>
+          <section>
+            <h2>Annie Oberholtzer</h2>
+            Height: 5&apos;3&quot; | Hair: Brown | Eyes: Brown
           </section>
-            <section>
-              <h2>Annie Oberholtzer</h2>
-              Height: 5'3" | Hair: Brown | Eyes: Brown
-            </section>
+          <br />
           <section className={styles.performances}>
             <table>
               <caption>Theatre:</caption>
@@ -143,6 +156,7 @@ const About: NextPageWithLayout = () => {
                 </tr>
               </tbody>
             </table>
+            <br />
             <table>
               <caption>Film:</caption>
               <thead>
@@ -170,22 +184,24 @@ const About: NextPageWithLayout = () => {
               </tbody>
             </table>
           </section>
+          <br />
           <hr />
+          <br />
           <section>
             <table>
               <caption>Education:</caption>
               <thead>
                 <td>Focus</td>
-                <td>Classes</td>
+                <td colSpan={2}>Classes</td>
               </thead>
               <tbody>
                 <tr>
-                  <td>Bachelor of Fine Arts - On Camera Certificate - Missouri State University</td>
+                  <td colSpan={3}>Bachelor of Fine Arts - On Camera Certificate - Missouri State University</td>
                 </tr>
                 <br />
                 <tr>
                   <th scope="row">Acting:</th>
-                  <td>
+                  <td colSpan={2}>
                     <ul>
                       <li><i>Acting:</i> Kurt Heinlein | Sarah Wiggin | Lisa Brescia | Robert Westenberg</li>
                       <li><i>Acting for the Camera:</i> Kurt Heinlein</li>
@@ -198,7 +214,7 @@ const About: NextPageWithLayout = () => {
                 <tr>
                   <th scope="row">Stage Combat:
                   </th>
-                  <td>
+                  <td colSpan={2}>
                     <tr>
                       <p><i>FDC Certified Basic Action Combatant:</i></p>
                       <ul>
@@ -219,7 +235,7 @@ const About: NextPageWithLayout = () => {
                 <br />
                 <tr>
                   <th scope="row">Voice:</th>
-                  <td>
+                  <td colSpan={2}>
                     <ul>
                       <li>Luann Higgs</li>
                       <li>Elodie Perroud</li>

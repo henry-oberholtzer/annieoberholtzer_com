@@ -4,3 +4,7 @@
   width: 1080px;
   height: 100vh;
 }
+
+.content {
+  padding: 0px 16px;
+}

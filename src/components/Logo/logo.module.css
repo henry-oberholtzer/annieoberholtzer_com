@@ -6,13 +6,15 @@
   width: 350px;
   /* border: 1px solid red; */
   user-select: none;
+  color: var(--foreground);
   text-transform: uppercase;
 }
 
 
-.box:hover {
+.box:hover, .box:focus, .box:active {
   cursor: pointer;
-  opacity: 0.9;
+  color: var(--highlight);
+  transition: color 200ms ease;
 }
 
 .heading {
@@ -44,14 +46,19 @@
   margin-bottom: 4px;
 }
 
+.box:hover .underline, .box:focus .underline, .box:focus .underline {
+  border: 1px solid var(--highlight);
+  transition: border 200ms ease;
+}
+
+.box:hover .sword, .box:focus .sword, .box:focus .sword {
+  transform: rotate(360deg);
+  transition: all 200ms ease-in-out;
+}
 
 @media only screen and (max-width: 350px) {
   .box {
     width: 320px;
     font-size: 90%;
   }
-}
-
-.box:hover, .box:active {
-  color: var(--foreground);
 }

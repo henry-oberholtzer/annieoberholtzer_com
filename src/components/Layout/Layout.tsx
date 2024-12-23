@@ -7,7 +7,9 @@ export default function Layout({ children}: PropsWithChildren) {
   return (
     <div className={styles.parent}>
       <NavBar />
-      {children}
+      <div className={styles.content}>
+        {children}
+      </div>
       <Footer />
     </div>
   )

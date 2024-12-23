@@ -1,9 +1,7 @@
 .box {
-  width: fit-content;
-  min-width: 120px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: inline-block;
+  max-width: 100%;
+  min-width: fit-content;
 }
 
 .boxInner {
@@ -11,6 +9,17 @@
   text-align: center;
   text-wrap: nowrap;
   width: fit-content;
+}
+
+/* .box:hover, .box:active, .box:focus {
+  color: var(--highlight);
+  transition: color 200ms ease;
+} */
+
+.box:hover .boxInner, .box:active .boxInner, .box:focus .boxInner{
+  color: var(--highlight);
+  border-bottom: 2px solid var(--highlight);
+  transition: 200ms ease;
 }
 
 
