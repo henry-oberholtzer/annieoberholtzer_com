@@ -7,7 +7,7 @@ const routes: NavigationButton[] = [
     to: "about",
   },
   {
-    name: "Headshot / Resume",
+    name: "Resume",
     to: "resume",
   },
   {
@@ -24,13 +24,9 @@ export default function NavBar() {
   return (
     <Header>
       <Logo />
-      <NavigationGroup>
-        {routes.map((button, i) => {
-          return (
-            <NavigationButton key={i} props={button} />
-          )
-        })}
-      </NavigationGroup>
+      <div>
+      </div>
+      <NavigationGroup routes={routes} />
     </Header>
   )
 }

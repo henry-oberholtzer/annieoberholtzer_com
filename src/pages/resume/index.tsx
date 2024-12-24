@@ -11,7 +11,7 @@ import headshot_2 from '../../app/media/images/annie_headshot_2.jpg'
 import headshot_3 from '../../app/media/images/annie_headshot_3.jpg'
 import headshot_4 from '../../app/media/images/annie_headshot_4.jpg'
 import styles from './about.module.css'
-import { NavigationButton } from "@/components";
+import { NavigationGroup } from "@/components";
 import { SlideshowSlide } from "@/components/Slideshow/types";
 
 const images: SlideshowSlide[] = [
@@ -33,6 +33,31 @@ const images: SlideshowSlide[] = [
   }
 ]
 
+const downloads: NavigationButton[] = [
+  {
+  name: "Download Resume",
+  to: "/public/downloads/AnnieOberholtzerResume2025.pdf",
+  download: "AnnieOberholtzerResume",
+  target: "blank"
+  },
+  {
+  name: "Download Headshots",
+  to: "download",
+  target: "blank"
+  },
+  {
+  name: "Download All",
+  to: "download",
+  target: "blank"
+  },
+  {
+  name: "Actors Access",
+  to: "https://resumes.actorsaccess.com/annieoberholtzer",
+  target: "blank"
+  }
+  ]
+
+
 const generateSlides = (slides: SlideshowSlide[]) => {
   return slides.map((i, index) => {
     return (
@@ -50,6 +75,7 @@ const generateSlides = (slides: SlideshowSlide[]) => {
 
 const About: NextPageWithLayout = () => {
   const slides = generateSlides(images);
+  const download = (<NavigationGroup routes={downloads} />)
   return (
     <div>
       <div className={styles.headshotResume}>
@@ -74,26 +100,7 @@ const About: NextPageWithLayout = () => {
           </Swiper>
         </div>
         <div className={styles.resume}>
-          <nav className={styles.downloads}>
-            <li>
-                  <NavigationButton props={{
-                    name: "Download Resume",
-                    to: "/download"
-                  }} />
-            </li>
-            <li>
-                  <NavigationButton props={{
-                    name: "Download Headshots",
-                    to: "/download"
-                  }} />
-            </li>
-            <li>
-                  <NavigationButton props={{
-                    name: "Download All",
-                    to: "/download"
-                  }} />
-            </li>
-          </nav>
+          {download}
           <section>
             <h2>Annie Oberholtzer</h2>
             Height: 5&apos;3&quot; | Hair: Brown | Eyes: Brown
@@ -212,7 +219,8 @@ const About: NextPageWithLayout = () => {
                 </tr>
                 <br />
                 <tr>
-                  <th scope="row">Stage Combat:
+                  <th scope="row">
+                    Stage Combat:
                   </th>
                   <td colSpan={2}>
                     <tr>
@@ -258,10 +266,9 @@ const About: NextPageWithLayout = () => {
                 </tr>
               </tbody>
             </table>
+            {download}
           </section>
         </div>
-      </div>
-      <div>
       </div>
     </div>
   )

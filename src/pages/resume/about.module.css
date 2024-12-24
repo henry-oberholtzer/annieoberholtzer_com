@@ -62,5 +62,6 @@
 .downloads li {
   list-style: none;
   grid-column: auto;
+  display: flex;
 }
 

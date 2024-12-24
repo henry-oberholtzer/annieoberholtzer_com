@@ -11,7 +11,7 @@
 }
 
 
-.box:hover, .box:focus, .box:active {
+.box:hover, .box:focus {
   cursor: pointer;
   color: var(--highlight);
   transition: color 200ms ease;
@@ -46,12 +46,12 @@
   margin-bottom: 4px;
 }
 
-.box:hover .underline, .box:focus .underline, .box:focus .underline {
+.box:hover .underline, .box:focus .underline {
   border: 1px solid var(--highlight);
   transition: border 200ms ease;
 }
 
-.box:hover .sword, .box:focus .sword, .box:focus .sword {
+.box:hover .sword, .box:focus .sword {
   transform: rotate(360deg);
   transition: all 200ms ease-in-out;
 }

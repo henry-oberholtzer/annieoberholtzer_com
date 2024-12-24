@@ -1,11 +1,16 @@
-import { PropsWithChildren } from "react"
 import styles from './navigationgroup.module.css'
+import { NavigationButton } from '../NavigationButton'
 
-
-const NavigationGroup = (props: PropsWithChildren) => {
+const NavigationGroup = ({routes}: NavigationGroupProps) => {
   return (
-    <nav className={styles.box}>
-      {props.children}
+    <nav className={styles.box} style={{ gridTemplateColumns: `repeat(${routes.length}, 1fr)` }}>
+      {routes.map((button, i) => {
+        return (
+          <li key={i}>
+            <NavigationButton key={i} props={button} />
+          </li>
+        )
+      })}
     </nav>
   )
 }

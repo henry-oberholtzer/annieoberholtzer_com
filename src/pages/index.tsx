@@ -1,29 +1,26 @@
-import { Slideshow } from "@/components";
-import placeholder from '../app/media/images/placeholder.jpg'
-import annie_cafe from '../app/media/images/annie_cafe.jpg';
-import annie_railroad from '../app/media/images/annie_railroad.jpg'
-import { SlideshowSlide } from "@/components/Slideshow/types";
+import annie_index from '../app/media/images/annie_index_page.jpg';
 import type { NextPageWithLayout } from "./_app";
 import Layout from "@/components/Layout/Layout";
 import type { ReactElement } from "react";
 import { Metadata } from "next";
 import styles from './index.module.css';
 import Link from "next/link";
+import Image from "next/image";
 
-const slideshowContents: SlideshowSlide[] = [
-  {
-    imageURL: placeholder,
-    altText: "This is placeholder text",
-  },
-  {
-    imageURL: annie_cafe,
-    altText: "This is placeholder text",
-  },
-  {
-    imageURL: annie_railroad,
-    altText: "This is placeholder text",
-  }
-]
+// const slideshowContents: SlideshowSlide[] = [
+//   {
+//     imageURL: placeholder,
+//     altText: "This is placeholder text",
+//   },
+//   {
+//     imageURL: annie_cafe,
+//     altText: "This is placeholder text",
+//   },
+//   {
+//     imageURL: annie_railroad,
+//     altText: "This is placeholder text",
+//   }
+// ]
 
 export const metadata: Metadata = {
   title: "Annie Oberholtzer",
@@ -32,19 +29,15 @@ export const metadata: Metadata = {
 
 const Page: NextPageWithLayout = () => {
   return (
-    <div className={styles.index_container} >
-      <div className={styles.slideshow} >
-        <Slideshow props={slideshowContents} />
-      </div>
-      <div className={styles.about}>
-        <section>
-          <h2>Hi! I&apos;m Annie Oberholtzer.</h2>
-          <h3 style={{ fontWeight: "normal" }}>NYC based actor & fight coordinator.</h3>
-          <p>Check out my <Link href="resume">resume</Link> and recent <Link href="media">acting reels</Link>.</p>
-          <br/>
-          <p>Interested in working together? Get in <Link href="contact">contact!</Link></p>
-        </section>
-      </div>
+    <div className={styles.about}>
+      <Image src={annie_index} alt={""} fill objectFit="cover" style={{ transform: "scaleX(-1) scale(1.15)", left: "-80px", top: "-80px"}} />
+      <section className={styles.text}>
+        <h2>Hi! I&apos;m Annie Oberholtzer.</h2>
+        <h3 style={{ fontWeight: "normal" }}>NYC based actor & fight coordinator.</h3>
+        <p>Check out my <Link href="resume">resume</Link> and recent <Link href="media">acting reels</Link>.</p>
+        <br/>
+        <p>Interested in working together? Get in <Link href="contact">contact!</Link></p>
+      </section>
     </div>
   );
 }

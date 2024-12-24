@@ -1,0 +1,3 @@
+interface NavigationGroupProps {
+  routes: NavigationButton[]
+}
