@@ -7,10 +7,6 @@ import styles from './index.module.css';
 import Image from "next/image";
 import data from "./index.json"
 
-export const metadata: Metadata = {
-  title: "Annie Oberholtzer",
-  description: "Actress & fight coordinator",
-};
 
 const Page: NextPageWithLayout = () => {
   return (

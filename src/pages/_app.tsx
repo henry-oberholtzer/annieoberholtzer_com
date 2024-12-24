@@ -18,7 +18,14 @@ type AppPropsWithLayout = AppProps & {
 export default function App({ Component, pageProps}: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page)
   return ( 
+  <>
+  <title>Annie Oberholtzer</title>
+  <meta name="description" content="Portfolio website for actress Annie Oberholtzer" />
+  <meta name="keywords" content="acting, theater, fight choreography, new york city, actress, film, stage, shakespeare" />
+  <link rel="icon" href="favicon.svg" />
   <main className={`${vollkorn.className} ${styles.main}`}>
     {getLayout(<Component {...pageProps} />)}
-  </main>)
+  </main>
+  </>
+  )
 }
