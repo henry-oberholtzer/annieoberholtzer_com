@@ -1,0 +1,136 @@
+{
+  "name": "Annie Oberholtzer",
+  "bio": "Height: 5'3\" | Hair: Brown | Eyes: Brown",
+  "acting": [{
+    "category": "Theatre:",
+    "productions": [{
+      "name": "Henry VI: Pt. 1 & 2",
+      "role": "Warwick / John Talbot",
+      "company": "C.A.G.E. Theater Company"
+    },
+    {
+      "name": "Good Kids",
+      "role": "Chloe",
+      "company": "Missouri State University"
+    },
+    {
+      "name": "She Kills Monsters",
+      "role": "U/S Lilith/Kaliope",
+      "company": "Missouri State University"
+    },
+    {
+      "name": "The Bitches",
+      "role": "Susan",
+      "company": "Missouri State University"
+    },
+    {
+      "name": "Sweat",
+      "role": "Assistant Fight Director",
+      "company": "Missouri State University"
+    },
+    {
+      "name": "Oklahoma",
+      "role": "Fight Director",
+      "company": "Springfield Catholic High School"
+    },
+    {
+      "name": "Twelfth Night",
+      "role": "Olivia",
+      "company": "ACME Theater Company"
+    }
+  ]},
+  {
+    "category": "Film:",
+    "productions": [
+    {
+      "name": "Seeking Stars",
+      "role": "Lead",
+      "company": "Missouri State University"
+    },
+    {
+      "name": "Timeless",
+      "role": "Lead",
+      "company": "Missouri State University"
+    }
+  ]
+  }],
+  "education": {
+    "title": "Education:",
+    "description": "Bachelor of Fine Arts - On Camera Certificate - Missouri State University",
+    "categories": [
+      {
+        "title": "Acting:",
+        "classes": [
+          {
+            "name": "Acting:",
+            "instructors": ["Kurt Heinlein", "Sarah Wiggin", "Lisa Brescia", "Robert Westernberg"]
+          },
+          {
+            "name": "Acting for the Camera:",
+            "instructors": ["Kurt Heinlein"]
+          },
+          {
+            "name": "Dialects:",
+            "instructors": ["Robert Westernberg"]
+          },
+          {
+            "name": "Voice and Movement:",
+            "instructors": ["Ed Swiney", "Joe Price", "Lisa Brescia"]
+          }
+        ]
+      },
+      {
+        "title": "Stage Combat:",
+        "classes": [
+          {
+            "name": "FDC Certified Basic Action Combatant:",
+            "instructors": ["Single Sword - Todd Campbell", "Quarterstaff - Daniel Levinson",
+            "Unarmed - Nate Bitton", "Grappling - Kurt Heinlein"]
+          },
+          {
+            "name": "SAFT Certified in Unarmed:",
+            "instructors": ["Fightography - Jacqueline Holloway"]
+          }
+        ]
+      },
+      {
+        "title": "Voice:",
+        "classes": [
+          {
+            "name": "",
+            "instructors": ["Luann Higgs", "Elodie Perroud"]
+          }
+        ]
+      },
+      {
+        "title": "Workshops:",
+        "classes": [
+          {
+            "name": "Alexander:",
+            "instructors": ["Joe Krienke"]
+          },
+          {
+            "name": "Voice Over:",
+            "instructors": ["Ike Amadi"]
+          },
+          {
+            "name": "Shakespeare:",
+            "instructors": ["James Garnon", "Jill Zager"]
+          },
+          {
+            "name": "Casting:",
+            "instructors": ["Kate Kumpkin", "Marisa Ross"]
+          },
+          {
+            "name": "Interview Project:",
+            "instructors": ["Louis Colainni"]
+          },
+          {
+            "name": "Vocal Combat:",
+            "instructors": ["D'Arcy Smith"]
+          }
+        ]
+      }
+    ]
+  }
+}

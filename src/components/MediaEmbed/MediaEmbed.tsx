@@ -41,7 +41,7 @@ const MediaRender = (props: MediaRenderProps) => {
     )
   }
   return (
-    <Image src={src} alt={desc} width={width} height={height} />
+    <Image src={`${src}`} alt={desc} width={width} height={height} />
   )
 }
 
