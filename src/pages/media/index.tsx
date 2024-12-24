@@ -7,15 +7,20 @@ import MediaEmbed from "@/components/MediaEmbed/MediaEmbed"
 const Media: NextPageWithLayout = () => {
   const collections = data.collections.map((collection, i) => {
     return (
-      <MediaEmbed
-        key={i}
-        src={collection.src}
-        date={collection.date}
-        width={collection.width}
-        height={collection.height}
-        title={collection.title}
-        description={collection.description}
-      />
+      <>
+        <MediaEmbed
+          key={i}
+          src={collection.src}
+          date={collection.date}
+          width={collection.width}
+          height={collection.height}
+          title={collection.title}
+          description={collection.description}
+        />
+        <br />
+        <hr />
+        <br />
+      </>
     )
   })
   return (

@@ -1,6 +1,7 @@
 import type { NextPageWithLayout } from "../_app"
 import 'swiper/css'
 import 'swiper/css/pagination'
+import 'swiper/css/autoplay'
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination } from "swiper/modules";
 import Layout from "@/components/Layout/Layout"

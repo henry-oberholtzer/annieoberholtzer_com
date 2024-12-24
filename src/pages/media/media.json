@@ -1,14 +1,120 @@
 {
   "collections": [
     {
-      "title": "Good Kids",
-      "description": "Images from the production of Good Kids",
-      "date": "12-24-2024",
-      "src": [ "/goodkids/annie_good_kids.jpg"],
-      "width": 1000,
+      "title": "Acting Reel",
+      "description": "Current acting reel",
+      "date": "2024",
+      "src": [
+        {
+          "url": "https://www.youtube.com/embed/9gJ_Gmz5owI?si=mJoxjaATfbprmp-D",
+          "alt": "Annie Oberholtzer's 2024 Acting Reel"
+        }
+      ],
+      "width":1048,
       "height": 500
-      
-
+    },
+    {
+      "title": "Quarterstaff Fight Reel",
+      "description": "Fight reel with Quarterstaff",
+      "date": 2022,
+      "src": [
+        {
+          "url": "https://www.youtube.com/embed/pEJUXkNGLuA?si=UuoUusCazn5TYDMU",
+          "alt": "Quaterstaff fight reel"
+        }
+      ],
+      "width": 1048,
+      "height": 500
+    },
+    {
+      "title": "Good Kids",
+      "description": "Images from the production of Good Kids at Missouri State University",
+      "date": "2022",
+      "src": [
+        {
+          "url": "/media/goodkids/annie_good_kids.jpg",
+          "alt": "Annie Oberholtzer in Good Kids"
+        },
+        {
+          "url": "/media/goodkids/annie_good_kids_2.jpg",
+          "alt": "Annie Oberholtzer & NAME in Good Kids"
+        },
+        {
+          "url": "/media/goodkids/annie_good_kids_3.jpg",
+          "alt": "Annie Oberholtzer in Good Kids",
+          "top": -250,
+          "left": 0
+        }
+      ],
+      "width": 1048,
+      "height": 500
+    },
+    {
+      "title": "Seeking Stars",
+      "description": "Images from the production of Seeking Stars",
+      "date": 2022,
+      "src": [
+        {
+          "url": "/media/seeking_stars/bts_1.jpg",
+          "alt": "Behind the scenes of the film Seeking Stars"
+        },
+        {
+          "url": "/media/seeking_stars/bts_2.jpg",
+          "alt": "Behind the scenes of the film Seeking Stars"
+        },
+        {
+          "url": "/media/seeking_stars/bts_3.jpg",
+          "alt": "Behind the scenes of the film Seeking Stars"
+        },
+        {
+          "url": "/media/seeking_stars/bts_4.jpg",
+          "alt": "Behind the scenes of the film Seeking Stars"
+        }
+      ],
+      "width": 1048,
+      "height": 500
+    },
+    {
+      "title": "She Kills Monsters",
+      "description": "Images from She Kills Monsters at Missouri State University",
+      "date": 2021,
+      "src": [
+        {
+          "url": "/media/skm/skm1.jpg",
+          "alt": "Annie Oberholtzer in She Kills Monsters"
+        },
+        {
+          "url": "/media/skm/skm2.jpg",
+          "alt": "Annie Oberholtzer in She Kills Monsters"
+        }
+      ],
+      "width": 1028,
+      "height": 500
+    },
+    {
+      "title": "Twelfth Night",
+      "description": "Images from the ACME Theater Company production of Twelfth Night",
+      "date": 2018,
+      "src": [
+        {
+          "url": "/media/tn/tn1.jpg",
+          "alt": "Annie Oberholtzer in Twelfth Night"
+        },
+        {
+          "url": "/media/tn/tn2.jpg",
+          "alt": "Annie Oberholtzer in Twelfth Night"
+        },
+        {
+          "url": "/media/tn/tn3.jpg",
+          "alt": "Annie Oberholtzer in Twelfth Night"
+        },
+        {
+          "url": "/media/tn/tn4.jpg",
+          "alt": "Annie Oberholtzer in Twelfth Night"
+        }
+      ],
+      "width": 1028,
+      "height": 500
     }
   ]
 }
