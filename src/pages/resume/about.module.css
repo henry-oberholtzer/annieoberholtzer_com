@@ -1,21 +1,28 @@
-.resume caption {
-  font-size: 22px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-align: left;
-}
 
-.resume tr {
-  width: 100%;
-}
 
 .performances th:first-of-type {
   font-style: italic;
   text-transform: none;
 }
 
+.resume {
+	border-collapse: collapse;
+	table-layout: auto;
+	width: 100%;
+	grid-column: 2;
+}
+
+.resume th:first-of-type {
+	text-align: left;
+	text-wrap: nowrap;
+}
+
 .resume thead {
   display: none;
+}
+
+.resume tr {
+  width: 100%;
 }
 
 .resume th {
@@ -25,8 +32,26 @@
   vertical-align: top;
 }
 
+.resume caption {
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: left;
+}
+
 .resume ul {
   list-style: none;
+}
+
+.performances tbody {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.performances tbody tr {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
 }
 
 .headshotResume {
@@ -43,9 +68,19 @@
   height: 450px;
 }
 
-.resume {
-  grid-column: 2;
+.education tbody {
+	width: 100%;
 }
+
+.education tbody tr {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.education tbody tr td {
+	grid-column: span 2;
+}
+
 
 .swiper {
   width: min-content;

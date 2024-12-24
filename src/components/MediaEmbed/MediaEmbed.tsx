@@ -3,6 +3,7 @@ import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import styles from './mediaembed.module.css';
 
 import { SwiperSlide, Swiper } from 'swiper/react';
 import { Pagination, Navigation } from 'swiper/modules';
@@ -86,6 +87,7 @@ const MediaEmbed = (props: MediaEmbedProps) => {
   return (
     <div>
       <Swiper
+	  	className={styles.swiper}
         loop={true}
         modules={[Navigation, Pagination]}
         navigation

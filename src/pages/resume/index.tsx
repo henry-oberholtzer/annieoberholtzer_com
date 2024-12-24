@@ -86,7 +86,7 @@ const About: NextPageWithLayout = () => {
             loop={true}
             modules={[Pagination]}
             autoplay={{
-              delay: 6000,
+              delay: 2000,
               pauseOnMouseEnter: true,
               disableOnInteraction: false,
             }}
@@ -134,7 +134,7 @@ const About: NextPageWithLayout = () => {
           <br />
           <hr />
           <br />
-          <section>
+          <section className={styles.education}>
             <table>
               <caption>{data.education.title}</caption>
               <tr>
