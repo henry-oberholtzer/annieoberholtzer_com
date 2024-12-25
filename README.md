@@ -1,11 +1,12 @@
 # AnnieOberholtzer.com
 
-Portfolio website for the actress & stage fighter Annie Oberholtzer
+Portfolio website for the actress & stage fighter Annie Oberholtzer. Designed to utilitze low cost hosting on static site websites.
 
 ## Technologies Used
 
 - Next.js
 - TypeScript
+- neocities, for hosting
 
 ## Running the site
 
