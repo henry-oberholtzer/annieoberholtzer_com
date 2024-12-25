@@ -1,24 +1,24 @@
 {
 	"media": {
 		"width": 300,
-		"height": 500,
+		"height": 300,
 		"src": [
 			{
-				"url": "/public/media/about/about1.jpg",
+				"url": "/media/about/about.jpg",
 				"alt": "Annie Oberholtzer, laughing and smiling with a fencing sword in hand"
-			},
-			{
-				"url": "/media/about/about2.jpg",
-				"alt": "Annie, crouching near railroad tracks, in a ponderous pose"
 			},
 			{
 				"url": "/media/about/about3.jpg",
 				"alt": "Annie, running her hand through her hair near a tree"
+			},
+			{
+				"url": "/media/about/about4.jpg",
+				"alt": "Annie as a child, in her Tai Kwon Do uniform."
 			}
 		]
 	},
 	"h1": "So who is Annie Oberholtzer?",
 	"p": ["I graduated Summa Cum Laude from Missouri State University with a BFA in Acting, an On-Camera Certificate, and a Criminology minor.", 
-		"Born and raised in sunny Davis CA, I now live in New York City.", "I'm passionate about fight choreography and adapting and interpreting Shakespeare. I recieved a Basic Actor Combat Certification from Fight Director’s Canada and have direct fight choreography for high school classes. I also assist in teaching combat for stage and screen to children and young adults.",
+		"Born and raised in sunny Davis CA, I now live in New York City.", "I'm passionate about fight choreography and adapting and interpreting Shakespeare. I recieved a Basic Actor Combat Certification from Fight Director’s Canada and have fight directed for high school classes. I also assist in teaching combat for stage and screen to children and young adults.",
   "Outside of the theater, you can find me at coffee shop with a chai lattte, or baking, with my dog Sammy at my feet."]
 }

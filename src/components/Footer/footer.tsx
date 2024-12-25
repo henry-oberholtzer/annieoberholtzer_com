@@ -7,6 +7,9 @@ export default function Footer () {
             &#xA9; Annie Oberholtzer 2024
           </p>
           <p>
+            <a href="https://www.instagram.com/annieoberholtzer/" target="blank">instagram</a>
+          </p>
+          <p>
             <a href="https://resumes.actorsaccess.com/annieoberholtzer" target="blank">actorsaccess</a>
           </p>
           <p>

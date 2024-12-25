@@ -1,0 +1,22 @@
+{
+  "width": 300,
+  "height": 450,
+  "src": [
+    {
+      "url": "/media/headshots/annie_headshot_1.jpg",
+      "alt": "Annie Oberholtzer in her most recent hedashot."
+    },
+    {
+      "url": "/media/headshots/annie_headshot_2.jpg",
+      "alt": "Annie Oberholtzer in a headshot."
+    },
+    {
+      "url": "/media/headshots/annie_headshot_3.jpg",
+      "alt": "Annie Oberholtzer in a headshot."
+    },
+    {
+      "url": "/media/headshots/annie_headshot_4.jpg",
+      "alt": "Annie Oberholtzer in a headshot."
+    }
+  ]
+}

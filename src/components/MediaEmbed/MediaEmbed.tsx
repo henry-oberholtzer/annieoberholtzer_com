@@ -50,9 +50,7 @@ const MediaRender = (props: MediaRenderProps) => {
     )
   } else if (src.url.match(mp4Regex)) {
     return (
-      <video>
-
-      </video>
+      <p>Incomplete.</p>
     )
   }
   return (
@@ -87,11 +85,13 @@ const MediaEmbed = (props: MediaEmbedProps) => {
   return (
     <div>
       <Swiper
-	  	className={styles.swiper}
+	  	  className={styles.swiper}
         loop={true}
         modules={[Navigation, Pagination]}
         navigation
-        pagination
+        pagination={{
+          clickable: true
+        }}
         spaceBetween={0}
         centeredSlides
         slidesPerView={'auto'}

@@ -1,51 +1,23 @@
 import type { NextPageWithLayout } from "../_app"
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/autoplay'
-import { Swiper, SwiperSlide } from "swiper/react"
-import { Pagination } from "swiper/modules";
 import Layout from "@/components/Layout/Layout"
 import type { ReactElement } from "react"
-import Image from "next/image"
-import headshot_1 from '../../app/media/headshots/annie_headshot_1.jpg'
-import headshot_2 from '../../app/media/headshots/annie_headshot_2.jpg'
-import headshot_3 from '../../app/media/headshots/annie_headshot_3.jpg'
-import headshot_4 from '../../app/media/headshots/annie_headshot_4.jpg'
-import styles from './about.module.css'
+import styles from './resume.module.css'
 import { NavigationGroup } from "@/components";
-import { SlideshowSlide } from "@/components/Slideshow/types";
 import data from "./resume.json";
-
-const images: SlideshowSlide[] = [
-  {
-    imageURL: headshot_1,
-    altText: "Annie Oberholtzer Headshot"
-  },
-  {
-    imageURL: headshot_2,
-    altText: "Annie Oberholtzer Headshot"
-  },
-  {
-    imageURL: headshot_3,
-    altText: "Annie Oberholtzer Headshot",
-  },
-  {
-    imageURL: headshot_4,
-    altText: "Annie Oberholtzer Headshot"
-  }
-]
+import images from "./headshots.json";
+import MediaEmbed from "@/components/MediaEmbed/MediaEmbed"
 
 const downloads: NavigationButton[] = [
   {
   name: "Download Resume",
   to: "downloads/AnnieOberholtzerResume2025.pdf",
-  download: "AnnieOberholtzerResume",
+  download: "AnnieOberholtzerResume2025",
   target: "blank"
   },
   {
-    name: "Download Media Pack",
-    to: "",
-    download: "AnnieOberholtzerMedia",
+    name: "Download Resume & Headshots",
+    to: "downloads/AnnieOberholtzerResumeHeadshots.zip",
+    download: "AnnieOberholtzerResumeHeadshots",
     target: "blank",
   },
   {
@@ -55,48 +27,16 @@ const downloads: NavigationButton[] = [
   }
   ]
 
-
-const generateSlides = (slides: SlideshowSlide[]) => {
-  return slides.map((i, index) => {
-    return (
-      <SwiperSlide 
-        key={`${i.altText}${index}`}>
-        <Image 
-          key={`${i.altText}${index}`}
-          src={i.imageURL} 
-          width={300}
-          alt={i.altText}
-          className={styles.headshot} />
-      </SwiperSlide>
-    )})
-}
-
 const About: NextPageWithLayout = () => {
-  const slides = generateSlides(images);
   const download = (<NavigationGroup routes={downloads} />)
   return (
     <div>
       <div className={styles.headshotResume}>
-        <div className={styles.headshot}>
-          <Swiper
-            className={styles.swiper}
-            centeredSlides={true}
-            slidesPerView={1}
-            spaceBetween={0}
-            loop={true}
-            modules={[Pagination]}
-            autoplay={{
-              delay: 2000,
-              pauseOnMouseEnter: true,
-              disableOnInteraction: false,
-            }}
-            pagination={{
-              clickable: true
-            }}
-            >
-              {slides}
-          </Swiper>
-        </div>
+        <MediaEmbed 
+          width={images.width}
+          height={images.height}
+          src={images.src}
+        />
         <div className={styles.resume}>
           {download}
           <section>
@@ -107,15 +47,13 @@ const About: NextPageWithLayout = () => {
           <section className={styles.performances}>
             {data.acting.map((type, i) => {
               return (
-                <>
-                  <table key={i}>
-                    <caption>{type.category}</caption>
-                    <thead>
-                      <td>Name</td>
-                      <td>Role</td>
-                      <td>Company</td>
-                    </thead>
-                  </table>
+                <table key={i}>
+                  <caption>{type.category}</caption>
+                  <thead>
+                    <td>Name</td>
+                    <td>Role</td>
+                    <td>Company</td>
+                  </thead>
                   <tbody>
                     {type.productions.map((prod, i) => {
                       return (
@@ -127,7 +65,7 @@ const About: NextPageWithLayout = () => {
                       )
                     })}
                   </tbody>
-                </>
+                </table>
               )
             })}
           </section>
